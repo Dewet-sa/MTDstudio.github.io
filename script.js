@@ -82,6 +82,38 @@
 
   if (els.year) els.year.textContent = new Date().getFullYear();
 
+  /* ---------- Header scroll state ---------- */
+  const header = document.getElementById("siteHeader");
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* ---------- Mobile nav toggle ---------- */
+  const navToggle = document.getElementById("navToggle");
+  const mobileNav = document.getElementById("mobileNav");
+
+  function closeMobileNav() {
+    if (!navToggle || !mobileNav) return;
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+  }
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", function () {
+      const open = navToggle.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(open));
+      mobileNav.classList.toggle("is-open", open);
+    });
+
+    mobileNav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", closeMobileNav);
+    });
+  }
+
   /* ---------- Contact form ---------- */
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");

@@ -79,3 +79,9 @@ silently failing.
 - **Logo/icon** — swap the files inside `assets/` (keep the same
   filenames, or update the `src`/`href` paths in `index.html`).
 
+## 5. Next steps
+
+When your full portfolio is ready, this same repo can simply be replaced
+(or you can build the rest of the site alongside this page and link to it
+from here) — since it's a plain static site, it will slot into whatever
+you build next without any migration work.
