@@ -17,7 +17,7 @@ mtd-portfolio/
     └── logo-full.png   → your full logo, shown in the hero
 ```
 
-## 1. Put this on GitHub Pages (drag & drop, no terminal needed)
+## 1. Put this on GitHub Pages 
 
 1. Go to **github.com** → click the **+** in the top right → **New repository**.
 2. Name it whatever you like. For a personal/main site, name it
