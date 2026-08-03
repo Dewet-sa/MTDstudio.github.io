@@ -78,5 +78,3 @@ silently failing.
   `index.html`.
 - **Logo/icon** — swap the files inside `assets/` (keep the same
   filenames, or update the `src`/`href` paths in `index.html`).
-
-
